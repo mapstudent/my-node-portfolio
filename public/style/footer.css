@@ -1,0 +1,7 @@
+footer {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  margin-top: 5rem;
+  text-align: center;
+}

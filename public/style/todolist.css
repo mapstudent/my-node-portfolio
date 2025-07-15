@@ -1,0 +1,199 @@
+   /* Theme Variables  */
+/* These are default (light mode) variables using CSS custom properties */
+:root {
+    --bg: #fff;                    
+    --text: #000;                  
+    --card: #f0f0f0;               
+    --highlight: #ff5a44;          
+    --shadow: rgba(0, 0, 0, 0.1);   
+  }
+  
+  /* Dark Mode Theme Variables  */
+  /* These override the root variables when body has class "dark" */
+  body.dark {
+    --bg: #121212;                        
+    --text: #f1f1f1;                      
+    --card: #1e1e1e;                      
+    --highlight: #4dabf7;                 
+    --shadow: rgba(255, 255, 255, 0.1);   
+  }
+
+  
+  /*  Base Styling */
+  body {
+    background-color: var(--bg);          
+    color: var(--text);                   
+    font-family: sans-serif;              
+    margin: 0;
+    padding: 1rem;
+    transition: background-color 0.3s, color 0.3s;  
+  }
+  
+  .container {
+    max-width: 500px;  
+    padding: 10px;   
+    margin: 3rem auto;  
+    border-radius: 15px;
+    box-shadow: 0 1px 3px var(--shadow);  
+     
+  }
+  
+  h1 {
+    text-align: center;    
+  }
+  
+  /*  Input and Buttons */
+  .todo-input {
+    display: flex;     
+    gap: 0.5rem;       
+    margin: 1rem 0;
+  }
+  
+  input[type="text"] {
+    flex: 1;           
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #2c3e50;   
+  }
+  
+  /* Specific button styles */
+  .add-btn { background-color: #6244b3; }     /* Add task */
+  .edit-btn { background-color: transparent; color: #000; font-size: 1.2rem; }  /* Edit task */
+  .delete-btn { background-color: transparent; font-size: 1.2rem;}   /* Delete task */
+  .done-checkbox { 
+    accent-color: #28a745;         /* Checkbox color */
+    margin-right: 0.5rem;
+  }
+  
+  /* Theme toggle button */
+  .dark-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text);           
+    margin-bottom: 1rem;
+  }
+  
+  /* Filter Buttons*/
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter.active {
+    background-color: #ff5a44;  
+    color: #fff;
+  }
+  
+  /*  Task List Styling */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px var(--shadow);
+    animation: slide-in 0.3s ease;   
+    gap: 0.5rem;
+  }
+  
+  li.slide-out {
+    animation: slide-out 0.3s ease forwards;
+  }
+  
+  /* Slide-in animation for new tasks */
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Slide-out animation for deleted tasks */
+  @keyframes slide-out {
+    to {
+      opacity: 0;
+      transform: translateX(100%);
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  /* Style completed tasks */
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  /* Container for task text and checkbox */
+  .task-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Container for edit and delete buttons */
+  .task-buttons {
+    display: flex;
+    gap: 0.3rem;
+  }
+  
+  /* Modal Confirmation Styling */
+  .modal {
+    display: none;                   
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);   
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background: var(--bg);
+    color: var(--text);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow);
+    text-align: center;
+  }
+  
+  /* Buttons inside modal */
+  .modal-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Confirm delete button */
+  .confirm-btn {
+    background-color: #ff5a44;
+  }
+  
+  /* Cancel delete button */
+  .cancel-btn {
+    background-color: #6244b3;
+  }

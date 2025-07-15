@@ -1,0 +1,261 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  /*Background animation*/
+  html, body {
+    height: 100%;
+  }
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send it to the back */
+    width: 100%;
+    height: 100%;
+} 
+  
+body {
+    font-family: i-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    background: #fff;
+    color: #000;
+    line-height: 1.8;
+    width: 80%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+h2 {
+  color: #6244b3;
+}
+/* Base Navbar Styles */
+
+.navbar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo img {
+  width: 60px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.5rem;
+  position: relative;
+}
+  /*Hero Section*/
+  .hero-section {
+    display: flex;
+    margin-top: 3rem;
+  }
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-info img {
+    width: 300px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-links{
+    padding: 0 1.5rem;
+    border: solid 3px #6244b3;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #6244b3;
+  }
+  .btn-links a {
+    list-style: none;
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    font-size: 1rem;
+    
+  }
+  
+  .btn-links:hover {
+    border: solid 3px #f26522;
+    background-color: #fff;
+  }
+  .btn-links:hover a {
+    color: #f26522;
+  }
+  
+  .info {
+    margin: 3rem auto;
+   
+  }
+  .info p {
+    color: #6244b3;
+  }
+
+  .intro {
+    line-height: 3px;
+  }
+  .hello h3 {
+    font-weight: 300;
+    font-size: 2rem;
+   
+  }
+  .name h3 {
+    font-weight: 600;
+    font-size: 6rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    gap: 3rem;               /* space between the icons */
+    padding: 1em 0;
+  }
+  
+  .social-connect a {
+    color: #6244b3;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 3rem;
+  }
+  
+  .social-connect a:hover {
+    color: #f26522;
+  }
+  
+
+
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+      }
+
+      /* Responsive for size 768px*/
+      .hamburger {
+        display: block; /* Show on mobile */
+        right: 0;
+      }
+    
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+      }
+    
+      .nav-links.open {
+        max-height: 300px; /* Adjust based on your menu height */
+      }
+    
+      .nav-links-list {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+      }
+      
+      /*Home- hero sections*/
+
+      .logo img {
+        width: 50px;
+        margin-right: auto;
+      }
+      .hero-section {
+          flex-direction: column;
+        
+      }
+      .intro {
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+   
+      .hello h3 {
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      .name h3 {
+        font-weight: 600;
+        font-size: 4rem;
+      }
+      .intro p {
+        font-size: 24px;
+        margin-left: 0;
+      }
+      .profile-info {
+        margin-top: 0;
+      }
+   
+    
+      .card {
+        padding: 1rem;
+        height: auto;
+      }
+    
+      .profile-info img {
+        width: 100%;
+        max-width: 250px;
+      }
+
+  
+      .dark-mode .navbar .logo img {
+        content: url(/images/myLogo.png);
+      }
+ 
+
+      /*Dark mode style for mobile*/
+
+      .dark-mode .nav-links {
+        background-color: #1e1e1e;
+        color: #fff;
+      }
+      .dark-mode .hamburger {
+        color: #fff;
+      }
+    }
+
+
+    
+  
+
+
+  
+ 
+  
+ 

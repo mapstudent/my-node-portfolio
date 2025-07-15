@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life & Tech Journey</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="/image/logo-icon" href="/images/mLogoUpdate.png">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-white shadow-md">
+    <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+      <h1 class="text-4xl text-[#ff5a44] md:text-5xl font-bold mb-4">Visual Studio Code (VSCode) Some Shortcut key</h1>
+      <p class="text-lg md:text-xl text-[#6244b3]">
+        Visual Studio Code (VSCode) as a JavaScript developer, you should focus on setup, shortcuts, extensions, and workflows that boost your productivity. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Story -->
+<div class="flex justify-center items-center min-h-screen">
+   
+<div class="p-6 dark:bg-gray-900 text-gray-800 dark:text-gray-200  space-y-6">
+  <div>
+    <h3 class="text-xl font-bold mb-2">1. Setup for JavaScript Projects</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li><strong>Install VSCode</strong>: <a href="https://code.visualstudio.com/" class="text-blue-600 underline">https://code.visualstudio.com/</a></li>
+      <li><strong>Enable Autosave</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">File &gt; Auto Save</code> or use <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+Shift+P</code> → type “Auto Save”</li>
+      <li><strong>Install Node.js</strong>: VSCode relies on it for running JavaScript backend and tools – <a href="https://nodejs.org/" class="text-blue-600 underline">https://nodejs.org/</a></li>
+    </ul>
+  </div>
+
+  <hr class="border-gray-300 dark:border-gray-700">
+
+  <div>
+    <h3 class="text-xl font-bold mb-2">2. Essential Extensions</h3>
+    <p class="mb-2">Search in Extensions (<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+Shift+X</code>):</p>
+    <ul class="list-disc list-inside space-y-1">
+      <li> <strong>ESLint</strong> — Lints your JavaScript code (auto-fix issues)</li>
+      <li> <strong>Prettier - Code Formatter</strong> — Auto-formats code</li>
+      <li> <strong>Live Server</strong> — For real-time reloading in the browser</li>
+      <li> <strong>JavaScript (ES6) code snippets</strong> — Faster coding</li>
+      <li> <strong>Path Intellisense</strong> — Auto-completes file paths</li>
+      <li> <strong>GitLens</strong> — Git made powerful inside VSCode</li>
+      <li> <strong>Thunder Client</strong> — Like Postman, for testing APIs</li>
+    </ul>
+  </div>
+
+  <hr class="border-gray-300 dark:border-gray-700">
+
+  <div>
+    <h3 class="text-xl font-bold mb-2">3. Keyboard Shortcuts (Speed!)</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+P</code> → Quick file navigation</li>
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+Shift+P</code> → Command palette</li>
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Alt+↑/↓</code> → Move line up/down</li>
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+/</code> → Toggle comment</li>
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+B</code> → Toggle sidebar</li>
+      <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ctrl+~</code> → Toggle terminal</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+  <!-- Highlights / Milestones -->
+  <section class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-6 grid gap-6 md:grid-cols-3">
+
+    <!-- First Line of Code -->
+    <a href="/writing-father-with-coding" class="block bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+      <h4 class="text-xl font-semibold mb-2">Life as a Father</h4>
+      <p class="text-gray-600 text-sm">I’m also a father. I have a young son, and taking care of him is one of the most meaningful...</p>
+    </a>
+
+<!-- Future Goals -->
+    <a href="/writing-goals" class="block bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+      <h4 class="text-xl font-semibold mb-2">Future Goals</h4>
+      <p class="text-gray-600 text-sm">I want to work at a tech company, keep building useful apps, and help others make their own career change.</p>
+    </a>
+    <!-- Writing  -->
+    <a href="/writing" class="block bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+      <h4 class="text-xl font-semibold mb-2">My Journey How to Code</h4>
+      <p class="text-gray-600 text-sm">I started by learning HTML, CSS, and JavaScript on my own...</p>
+    </a>
+  </div>
+</section>
+
+
+  <!-- Call to Connect -->
+    <footer class="bg-black text-[#ff5a44] text-center py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-2">Thanks for reading!</h3>
+      <p class="mb-4 text-gray-300">If you're also changing careers or learning tech, feel free to reach out – we can grow together.</p>
+      <a href="/themapjs" class="bg-[#ff5a44] text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition">
+        Home
+      </a>
+    </div>
+    <%- include('../partials/footer') %>
+  </footer>
+
+</body>
+</html>

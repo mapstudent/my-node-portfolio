@@ -1,0 +1,130 @@
+/* Basic body setup: center calculator, apply font and background */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Calculator container styling */
+.calculator {
+  background-color: black;
+  border-radius: 60px;
+  padding: 20px;
+  width: 320px;
+  max-width: 100%; /* Ensures responsiveness */
+
+}
+
+/* Display area styling for showing results */
+.display {
+  color: #fff;
+  font-size: 3rem;
+  text-align: right;
+  padding: 20px 10px;
+  height: 80px;
+  overflow-x: auto; /* Allows scrolling for long numbers */
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar in WebKit browsers */
+.display::-webkit-scrollbar {
+  display: none;
+}
+
+/* Button grid layout: 4 columns with spacing */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Base button style */
+button {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  color: #333;
+  background-color: white;
+  transition: background-color 0.2s ease;
+  aspect-ratio: 1 / 1; /* Keeps buttons square */
+  min-width: 60px;
+  min-height: 60px;
+}
+
+/* Button press feedback */
+button:active {
+  filter: brightness(1.2);
+}
+
+/* Style for 0 button (wider) */
+button.zero {
+  grid-column: span 2;
+  border-radius: 50px;
+  text-align: left;
+  padding-left: 28px;
+}
+
+/* Operator button (e.g., +, -, ×, ÷) */
+button.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+/* Function buttons (AC, %, +/-) */
+button.function,
+button.gray {
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Mobile body adjustments */
+  body {
+    background-color: black;
+    padding-top: 80px; /* Prevent overlap with back button */
+    align-items: flex-start;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Mobile calculator adjustments */
+  .calculator {
+    width: 100%;
+    border-radius: 40px;
+    padding: 16px;
+    box-shadow: none;
+  }
+
+  /* Mobile display adjustments */
+  .display {
+    font-size: 2.5rem;
+    padding: 16px 8px;
+    height: 70px;
+  }
+
+  /* Mobile button size adjustments */
+  button {
+    font-size: 1.2rem;
+    padding: 16px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  /* Mobile back-button adjustments */
+  .back-button {
+    top: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

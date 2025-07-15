@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>themapjs</title>
+    <link rel="icon" type="/image/logo-icon" href="/images/mLogoUpdate.png">
+    <link rel="stylesheet" href="/style/portfolio-header-style.css">
+    <link rel="stylesheet" href="/style/portfolio-projects-style.css">
+    <link rel="stylesheet" href="/style/portfolio-style.css">
+    <link rel="stylesheet" href="/style/portfolio-dark-mode.css">
+    <link rel="stylesheet" href="/style/footer.css">
+</head>
+<body>
+    <!--Header -->
+    <%- include('../partials/header') %>
+
+    <!--Container-->
+    <section class="project-container">
+        <div class="project-title">
+            <h2>Projects</h2>
+        </div>
+    </section>
+    <section class="project-cards">
+        <div class="card">
+            <h3>To-Do App</h3>
+            <p>A simple task manager app using JavaScript, localStorage, and DOM manipulation.<br>
+                Adding tasks, Marking as complete, Deleting/editing tasks, Filtering, Saving to localStorage.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">LocalStorage</span>
+            </div>
+            <a href="/register" class="demo-link" target="_blank">Demo | </a>
+            <a href="https://github.com/mapstudent/todo-list" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+        <div class="card">
+            <h3>Calculator App</h3>
+            <p>This is a simple, responsive calculator built using HTML, CSS, and JavaScript. It performs basic arithmetic operations.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">LocalStorage</span>
+            </div>
+            <a href="/calculator" class="demo-link" target="_blank">Demo | </a>
+            <a href="https://github.com/mapstudent/calculator" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+    <%- include('../partials/footer') %>
+    
+        
+    <script src="/script/nav.js"></script>
+    <script src="/script/portfolio-dark-mode.js"></script>
+    <script src="/script/footer.js"></script>
+</body>
+</html>

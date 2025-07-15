@@ -1,0 +1,58 @@
+
+  /*Style dark mode btn*/
+  .toggle-btn {
+    position: fixed;
+    top: 45px;
+    right: 30px;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  /*Dark Mode*/
+body.dark-mode {
+    background: #1e1e1e; color: #ddd;
+  }
+
+.dark-mode .nav-links-list a {
+    color: #fff;
+}
+.dark-mode .footer a {
+    color: #fff;
+}
+
+
+.dark-mode .btn-links:hover {
+  border: solid 3px #ff5a44;
+}
+
+.dark-mode .btn-links:hover a {
+    color: #ff5a44;
+  }
+
+.dark-mode .social-connect a:hover {
+    color: #ff5a44;
+    
+  }
+  
+.dark-mode .main-footer p {
+  color: #fff;
+  
+}
+
+.dark-mode h2 {
+  color: #ff5a44;
+}
+.dark-mode .info p {
+  color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    top: 90px;
+  }
+}
