@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding and make page responsive -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Page title -->
+  <title>Login</title>
+
+  <!-- Link to shared CSS stylesheet for form styling -->
+  <link rel="stylesheet" href="style/register-login.css" />
+</head>
+<body>
+  <!-- Container for the login form -->
+  <div class="form-container">
+    
+    <!-- Page header -->
+    <h2>Login</h2>
+
+    <!-- "Skip" link to allow user to go directly to the to-do list page -->
+    <h3><a href="todo.html">Skip</a></h3>
+
+    <!-- Login form -->
+    <form id="loginForm">
+      <!-- Email input field -->
+      <input type="email" id="loginEmail" placeholder="Email" required />
+
+      <!-- Password input field -->
+      <input type="password" id="loginPassword" placeholder="Password" required />
+
+      <!-- Submit button -->
+      <button type="submit">Login</button>
+
+      <!-- Link to registration page for users who don't have an account -->
+      <p>Don't have an account? <a href="register.html">Back to Register</a></p>
+    </form>
+  </div>
+
+  <!-- JavaScript to handle login logic -->
+  <script src="script/auth-register-login.js"></script>
+</body>
+</html>
