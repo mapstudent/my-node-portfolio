@@ -129,6 +129,7 @@ h2 {
    
   }
   .name h3 {
+    flex-wrap: wrap;
     font-weight: 600;
     font-size: 6rem;
   }
