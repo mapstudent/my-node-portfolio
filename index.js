@@ -71,9 +71,15 @@ app.get('/writing-vscode-shortcut', (req, res) => {
   res.render('pages/writing-vscode-shortcut');
 });
 
-// 404 page (optional)
+// 404 page
 app.use((req, res) => {
-  res.status(404).render('pages/404'); // if you create views/pages/404.ejs
+  res.status(404).render('pages/404'); 
+});
+
+// 500 page
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render('pages/500'); 
 });
 
 app.listen(PORT, () => {
