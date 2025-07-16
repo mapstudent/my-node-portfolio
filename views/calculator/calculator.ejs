@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/calculator-style.css">
+  <link rel="icon" type="image/x-icon" href="/images/mLogoUpdate.png">
+
+</head>
+
+<body>
+ <!-- Calculator Container -->
+<div class="calculator">
+
+  <!-- Display Screen: Shows the current input or result -->
+  <div class="display" id="display">0</div>
+
+  <!-- Calculator Buttons -->
+  <div class="buttons">
+
+    <!-- Top Row Buttons -->
+    <button class="btn gray" onclick="clearDisplay()">AC</button> <!-- Clear all input -->
+    <button class="btn gray" onclick="toggleSign()">+/-</button>   <!-- Toggle between positive/negative -->
+    <button class="btn gray" onclick="append('%')">%</button>      <!-- Add percentage symbol -->
+    <button class="btn operator" onclick="append('/')">&divide;</button> <!-- Division operator -->
+
+    <!-- Number Row: 7, 8, 9 -->
+    <button class="btn" onclick="append('7')">7</button>
+    <button class="btn" onclick="append('8')">8</button>
+    <button class="btn" onclick="append('9')">9</button>
+    <button class="btn operator" onclick="append('*')">&times;</button> <!-- Multiplication operator -->
+
+    <!-- Number Row: 4, 5, 6 -->
+    <button class="btn" onclick="append('4')">4</button>
+    <button class="btn" onclick="append('5')">5</button>
+    <button class="btn" onclick="append('6')">6</button>
+    <button class="btn operator" onclick="append('-')">&minus;</button> <!-- Subtraction operator -->
+
+    <!-- Number Row: 1, 2, 3 -->
+    <button class="btn" onclick="append('1')">1</button>
+    <button class="btn" onclick="append('2')">2</button>
+    <button class="btn" onclick="append('3')">3</button>
+    <button class="btn operator" onclick="append('+')">+</button> <!-- Addition operator -->
+
+    <!-- Bottom Row: 0, Decimal, Equals -->
+    <button class="btn wide" onclick="append('0')">0</button>      <!-- Zero (wide button) -->
+    <button class="btn" onclick="append('.')">.</button>           <!-- Decimal point -->
+    <button class="btn operator" onclick="calculate()">=</button>  <!-- Calculate the result -->
+
+  </div>
+</div>
+
+  <script src="script/calculator.js"></script>
+
+
+</body>
+
+</html>
