@@ -161,6 +161,7 @@ h2 {
     padding: 0 20px;
   }
 
+  header,
   footer,
   .content {
     max-width: 100%;
@@ -169,6 +170,17 @@ h2 {
     text-align: center;
   }
 
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.8rem;
+  }
 
   p {
     font-size: 1.1rem;
@@ -191,7 +203,7 @@ h2 {
   
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     body {
         width: 90%;
       }
@@ -202,20 +214,72 @@ h2 {
         right: 0;
       }
     
-  h1 {
-    font-size: 1.5rem;
-  }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+      }
+    
+      .nav-links.open {
+        max-height: 300px; /* Adjust based on your menu height */
+      }
+    
+      .nav-links-list {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+      }
+      
+      /*Home- hero sections*/
 
-  .button,
-  a.button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
+      .logo img {
+        width: 50px;
+        margin-right: auto;
+      }
+      .hero-section {
+          flex-direction: column;
+        
+      }
+      .intro {
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+   
+      .hello h3 {
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      .name h3 {
+        font-weight: 600;
+        font-size: 4rem;
+      }
+      .intro p {
+        font-size: 24px;
+        margin-left: 0;
+      }
+      .profile-info {
+        margin-top: 0;
+      }
+   
+    
+      .card {
+        padding: 1rem;
+        height: auto;
+      }
+    
+      .profile-info img {
+        width: 100%;
+        max-width: 250px;
+      }
 
   
       .dark-mode .navbar .logo img {
@@ -232,9 +296,7 @@ h2 {
       .dark-mode .hamburger {
         color: #fff;
       }
-
     }
-  
 
 
     
