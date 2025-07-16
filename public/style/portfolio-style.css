@@ -161,7 +161,6 @@ h2 {
     padding: 0 20px;
   }
 
-  header,
   footer,
   .content {
     max-width: 100%;
@@ -170,17 +169,6 @@ h2 {
     text-align: center;
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.8rem;
-  }
 
   p {
     font-size: 1.1rem;
@@ -249,7 +237,7 @@ h2 {
       .dark-mode .hamburger {
         color: #fff;
       }
-    }
+  
 
 
     
