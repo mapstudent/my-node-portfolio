@@ -47,20 +47,20 @@ app.get('/writing-goals', (req, res) => {
 });
 
 app.get('/todo', (req, res) => {
-  res.render('pages/todo-list/todo');
+  res.render('todo-list/todo');
 });
 
 app.get('/login', (req, res) => {
-  res.render('pages/todo-list/login');
+  res.render('todo-list/login');
 });
 
 
 app.get('/register', (req, res) => {
-  res.render('pages/todo-list/register');
+  res.render('todo-list/register');
 });
 
 app.get('/calculator', (req, res) => {
-  res.render('pages/calculator/calculator');
+  res.render('calculator/calculator');
 });
 
 app.get('/resume', (req, res) => {
