@@ -1,36 +1,46 @@
-/* Base Styles */
+/* ---------------------------
+   ✅ Global Base Styles
+---------------------------- */
 * {
-    box-sizing: border-box;
-    padding: 0;
-  }
-  /*Background animation*/
-  html, body {
-    height: 100%;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji;
+  background: #fff;
+  color: #000;
+  line-height: 1.8;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
 #background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Send it to the back */
-    width: 100%;
-    height: 100%;
-} 
-  
-body {
-    font-family: i-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    background: #fff;
-    color: #000;
-    line-height: 1.8;
-    width: 80%;
-    padding: 1rem;
-    margin: 0 auto;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------
+   ✅ Typography
+---------------------------- */
 h2 {
   color: #6244b3;
 }
-/* Base Navbar Styles */
 
+/* ---------------------------
+   ✅ Navbar Styles
+---------------------------- */
 .navbar {
   margin-top: 20px;
   display: flex;
@@ -43,15 +53,14 @@ h2 {
   width: 60px;
 }
 
-/* Hamburger Button */
 .hamburger {
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* Hidden by default */
+  display: none;
+  /* hidden by default; shown in mobile */
 }
-
 
 .nav-links {
   display: flex;
@@ -70,240 +79,323 @@ h2 {
   font-size: 1.5rem;
   position: relative;
 }
-  /*Hero Section*/
+
+/* ---------------------------
+   ✅ Hero Section
+---------------------------- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* .profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info img {
+  width: 300px;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  line-height: 3px;
+}
+
+.hello h3 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.name h3 {
+  display: flex;
+  font-weight: 600;
+  font-size: 6rem;
+}
+
+.info {
+  margin: 3rem auto;
+}
+
+.info p {
+  color: #6244b3;
+} */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.hero-section .info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-section .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section .intro .hello h3 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-section .intro .name h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+
+}
+
+.hero-section .profile-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------------
+   ✅ Button Styles
+---------------------------- */
+.btn-links {
+  padding: 0 1.5rem;
+  border: 3px solid #6244b3;
+  border-radius: 15px;
+  background-color: #6244b3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-links:hover {
+  background-color: #fff;
+  border-color: #f26522;
+}
+
+.btn-links:hover a {
+  color: #f26522;
+}
+
+/* ---------------------------
+   ✅ Footer / Social Icons
+---------------------------- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1em 0;
+}
+
+.social-connect a {
+  color: #6244b3;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-connect a:hover {
+  color: #f26522;
+}
+
+/* ---------------------------
+   ✅ Responsive Styles
+---------------------------- */
+
+/*Larg screen*/
+
+@media screen and (max-width: 1280px) {
   .hero-section {
-    display: flex;
-    margin-top: 3rem;
-  }
-  .profile-info {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-info img {
-    width: 300px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .btn-links{
-    padding: 0 1.5rem;
-    border: solid 3px #6244b3;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: #6244b3;
-  }
-  .btn-links a {
-    list-style: none;
-    text-decoration: none;
-    color:#fff;
-    font-weight: 600;
-    font-size: 1rem;
-    
-  }
-  
-  .btn-links:hover {
-    border: solid 3px #f26522;
-    background-color: #fff;
-  }
-  .btn-links:hover a {
-    color: #f26522;
-  }
-  
-  .info {
-    margin: 3rem auto;
-   
-  }
-  .info p {
-    color: #6244b3;
-  }
-
-  .intro {
-    line-height: 3px;
-  }
-  .hello h3 {
-    font-weight: 300;
-    font-size: 2rem;
-   
-  }
-  .name h3 {
-    flex-wrap: wrap;
-    font-weight: 600;
-    font-size: 6rem;
-  }
-
-  .footer {
-    display: flex;
-    justify-content: center; /* horizontal centering */
-    align-items: center;     /* vertical centering */
-    gap: 3rem;               /* space between the icons */
-    padding: 1em 0;
-  }
-  
-  .social-connect a {
-    color: #6244b3;
-    font-size: 24px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 3rem;
-  }
-  
-  .social-connect a:hover {
-    color: #f26522;
-  }
-
-
-  /* Base responsive styles for tablets */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  body {
-    padding: 0 20px;
-  }
-
-  header,
-  footer,
-  .content {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
     text-align: center;
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 10px 0;
+  .hero-section .name h3 {
+    font-size: 3rem;
   }
 
-  h1, h2, h3 {
-    font-size: 1.8rem;
+  .hero-section .intro .hello h3 {
+    font-size: 1.6rem;
   }
 
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .button,
-  a.button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
-  /* Example for demo/project section */
-  .project-card {
-    width: 100%;
-    margin-bottom: 2rem;
+  .hero-section .profile-info {
+    margin-top: 2rem;
   }
 }
 
-  
+@media screen and (min-width: 1024px) {
 
+  /* Hero section layout */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10%;
+    gap: 2rem;
+  }
+
+  .hero-section .info {
+    flex: 1;
+  }
+
+  .hero-section .profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .hero-section .btn-links {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .hero-section .btn-links a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  /* Footer layout */
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .social-connect a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-connect a:hover {
+    color: #0077b5;
+    /* LinkedIn Blue */
+  }
+}
 
 @media (max-width: 768px) {
-    body {
-        width: 90%;
-      }
+  body {
+    width: 90%;
+  }
 
-      /* Responsive for size 768px*/
-      .hamburger {
-        display: block; /* Show on mobile */
-        right: 0;
-      }
-    
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out;
-        box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.2);
-        background-color: #fff;
-      }
-    
-      .nav-links.open {
-        max-height: 300px; /* Adjust based on your menu height */
-      }
-    
-      .nav-links-list {
-        flex-direction: column;
-        padding: 1rem 0;
-        gap: 1rem;
-      }
-      
-      /*Home- hero sections*/
+  .hamburger {
+    display: block;
+    color: #000;
+  }
 
-      .logo img {
-        width: 50px;
-        margin-right: auto;
-      }
-      .hero-section {
-          flex-direction: column;
-        
-      }
-      .intro {
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: 1rem;
-      }
-   
-      .hello h3 {
-        font-weight: 300;
-        font-size: 2rem;
-      }
-      .name h3 {
-        font-weight: 600;
-        font-size: 4rem;
-      }
-      .intro p {
-        font-size: 24px;
-        margin-left: 0;
-      }
-      .profile-info {
-        margin-top: 0;
-      }
-   
-    
-      .card {
-        padding: 1rem;
-        height: auto;
-      }
-    
-      .profile-info img {
-        width: 100%;
-        max-width: 250px;
-      }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.2);
+  }
 
-  
-      .dark-mode .navbar .logo img {
-        content: url(/images/myLogo.png);
-      }
- 
+  .nav-links.open {
+    max-height: 300px;
+  }
 
-      /*Dark mode style for mobile*/
+  .nav-links-list {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
 
-      .dark-mode .nav-links {
-        background-color: #1e1e1e;
-        color: #fff;
-      }
-      .dark-mode .hamburger {
-        color: #fff;
-      }
-    }
+  .logo img {
+    width: 50px;
+    margin-right: auto;
+  }
 
+  .hero-section {
+    flex-direction: column;
+  }
 
-    
-  
+  .intro {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 
+  .hello h3 {
+    font-size: 2rem;
+  }
 
-  
- 
-  
- 
+  .name h3 {
+    font-size: 4rem;
+  }
+
+  .intro p {
+    font-size: 24px;
+  }
+
+  .profile-info {
+    margin-top: 0;
+  }
+
+  .card {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .profile-info img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Dark mode on mobile */
+  .dark-mode .nav-links {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  .dark-mode .hamburger {
+    color: #fff;
+  }
+
+  .dark-mode .navbar .logo img {
+    content: url(/images/myLogo.png);
+  }
+}
