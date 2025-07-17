@@ -5,6 +5,8 @@ if (hamburger) {
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
 
-    hamburger.textContent = hamburger.textContent === '☰' ? '🗙' : '☰';
+    // Clean text comparison to avoid spacing issues
+    const currentIcon = hamburger.textContent.trim();
+    hamburger.textContent = currentIcon === '☰' ? '🗙' : '☰';
   });
 }
