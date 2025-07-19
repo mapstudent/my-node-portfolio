@@ -133,7 +133,7 @@ h2 {
 .btn-links {
   padding: 0 1.5rem;
   border: 3px solid #6244b3;
-  border-radius: 15px;
+  border-radius: 30px;
   cursor: pointer;
   background-color: #6244b3;
   transition: all 0.3s ease;
@@ -239,7 +239,7 @@ h2 {
     font-size: 1rem;
     color: #fff;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 30px;
     cursor: pointer;
   }
 
